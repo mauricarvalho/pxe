@@ -32,7 +32,7 @@ RUN wget -q http://www.memtest.org/download/"$MEMTEST_VERSION"/memtest86+-"$MEMT
 
 # Configure PXE and TFTP
 COPY tftpboot/ /var/lib/tftpboot
-
+RUN chmod 777 -R /var/lib
 # Configure DNSMASQ
 COPY etc/ /etc
 
